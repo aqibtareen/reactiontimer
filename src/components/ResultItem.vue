@@ -12,9 +12,9 @@ export default {
     }
   },
   mounted () {
-    if (this.score < 250) {
+    if (this.score < 400) {
       this.rank = 'Very Fast speed'
-    } else if (this.score < 400) {
+    } else if (this.score < 600) {
       this.rank = 'Average Fast speed'
     } else {
       this.rank = 'slow speed......'
