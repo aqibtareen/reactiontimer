@@ -1,6 +1,6 @@
 <template>
     <p>Reaction Time - {{ score }} ms</p>
-    <p class="rank">{{ rank }}</p>
+    <p class="rank">{{ rank }} Kindly click on reload before playing to get accurate result</p>
 </template>
 
 <script>
@@ -16,8 +16,10 @@ export default {
       this.rank = 'Very Fast speed'
     } else if (this.score < 600) {
       this.rank = 'Average Fast speed'
-    } else {
+    } else if (this.score < 1000) {
       this.rank = 'slow speed......'
+    } else {
+      this.rank = 'out of time'
     }
   }
 }

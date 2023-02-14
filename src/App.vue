@@ -1,6 +1,7 @@
 <template>
   <h1>Aqib Reaction Timer</h1>
-  <button @click="start" :disabled="isPlaying">Click to play</button>
+  <button @click="start" :disabled="isPlaying" >Click to play</button>
+  <button @click="reloadPage">Reload</button>
   <BlockItem v-if="isPlaying" :delay="delay" @end="endGame" />
   <ResultItem v-if="showResults" :score="score" />
 </template>
@@ -28,6 +29,9 @@ export default {
       this.score = reactionTime
       this.isPlaying = false
       this.showResults = true
+    },
+    reloadPage () {
+      window.location.reload()
     }
   }
 }
