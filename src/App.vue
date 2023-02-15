@@ -1,4 +1,5 @@
 <template>
+  <title>Vuejs Reaction timer</title>
   <h1>Aqib Reaction Timer</h1>
   <button @click="start" :disabled="isPlaying" >Click to play</button>
   <button @click="reloadPage">Reload</button>
